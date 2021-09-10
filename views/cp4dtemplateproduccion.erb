@@ -1,8 +1,9 @@
+
 <form action="/cp4dtemplateproduccionrespuesta" method="get">
 
 
-    <!-- Parametros generales de la solución -->
-    <div class="row wrapper wrapper-content animated fadeInRight">
+<!-- Parametros generales de la solución -->
+<div class="row wrapper wrapper-content animated fadeInRight">
         <div class="row wrapper border-bottom white-bg page-heading">
             <div class="col-lg-12 text-center">
                 <h2>Ambiente productivo CP4D</h2>
@@ -46,7 +47,7 @@
                                 </select>
                             </td>
                         </tr>
-                        <td colspan="2">
+                    <td colspan="2">
                       <input type="checkbox" name="increspaldos" id="increspaldos" value=true onchange="habRespaldos()" checked>Incluir Respaldos<br>
                       <input type="checkbox" name="inclogs" id="inclogs" value=true onchange="habLogs()" checked>Incluir Monitoreo de Logs<br>
                       <input type="checkbox" name="incsalud" id="incsalud" value=true onchange="habSalud()" checked>Incluir Monitoreo de Salud<br>
@@ -54,21 +55,20 @@
                       <input type="checkbox" name="incga" id="incga" value=true onchange="habGateways()" checked>Incluir Appliances de comunicaciones<br>
                       <input type="checkbox" name="incdl" id="incdl" value=true onchange="habEnlaces()" checked>Incluir Enlaces Dedicados<br>
                       <input type="checkbox" name="incpw" id="incpw" value=true onchange="habPortworx()"checked>Incluir DR<br>
-
-                        </td>
-                    </tbody>
-                </table>
+                      </td>
+                      </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
         </div>
     </div>
-    </div>
-    </div>
 
-    <!-- Fin Parametros generales de la solución -->
+<!-- Fin Parametros generales de la solución -->
 
 
 
-    <!-- tabla parametros del clúster -->
+<!-- tabla parametros del clúster -->
 
     <div class="wrapper wrapper-content animated fadeInRight">
         <div class="row">
@@ -93,84 +93,69 @@
                                                 </tr>
                                             </thead>
                                             <tr>
-                                                <td>CPU</td>
-                                                <td>
-                                                    <label for="cpu"><input type="number" id="cpu" name="cpu">
-                                                </td>
-                                                <td>
-                                                    <label for="cpu"><input type="number" id="cpudallas" name="cpudallas">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>RAM (GB)</td>
-                                                <td>
-                                                    <label for="RAM (GB)"><input type="number" id="ram" name="ram">
-                                                </td>
-                                                <td>
-                                                    <label for="RAM (GB)"><input type="number" id="ramdallas" name="ramdallas">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Almacenamiento Blockstorage/Filestorage (GB)</td>
-                                                <td>
-                                                    <label for="Almacenamiento Filestorage (GB)">
-                                                        <input type="number" id="storage" onkeydown="cambiostorage()"
-                                                            onchange="cambiostorage()" name="storage">
-                                                </td>
-                                                <td>
-                                                    <label for="Almacenamiento Filestorage (GB)">
-                                                        <input type="number" id="storagedallas" onkeydown="cambiostoragedallas()"
-                                                            onchange="cambiostoragedallas()" name="storagedallas">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>IOPS Almacenamiento</td>
-                                                <td>
-                                                    <select name="iops" id="iops">
-                                                        <option value=".25">.25</option>
-                                                        <option value="2">2</option>
-                                                        <option value="4" selected="selected">4</option>
-                                                        <option value="10">10</option>
-                                                    </select>
-                                                </td>
-                                                <td>
-                                                    <select name="iopsdallas" id="iopsdallas">
-                                                        <option value=".25">.25</option>
-                                                        <option value="2">2</option>
-                                                        <option value="4" selected="selected">4</option>
-                                                        <option value="10">10</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tipo Infraestructura</td>
-                                                <td>
-                                                    <select name="infra_type" id="infra_type">
-                                                        <option value="shared">Compartida</option>
-                                                        <option value="dedicated">Dedicada</option>
-                                                        <option value="bm" selected>Bare Metal</option>
-                                                    </select>
-                                                </td>
-                                                <td>
-                                                    <select name="infra_typedallas" id="infra_typedallas">
-                                                        <option value="shared">Compartida</option>
-                                                        <option value="dedicated">Dedicada</option>
-                                                        <option value="bm" selected>Bare Metal</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                        </td>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    </div>
-           
+                          <td>CPU</td>
+                          <td>
+                            <label for="cpu"><input type="number" id="cpu" name="cpu">
+                          </td>
+                          <td>
+                            <label for="cpu"><input type="number" id="cpudallas" name="cpudallas">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>RAM (GB)</td>
+                          <td>
+                            <label for="RAM (GB)"><input type="number" id="ram" name="ram">
+                          </td>
+                          <td>
+                            <label for="RAM (GB)"><input type="number" id="ramdallas" name="ramdallas">
+                          </td>
+                        </tr>
+                        
+                        <tr>
+                          <td>IOPS Almacenamiento</td>
+                          <td>
+                            <select name="iops" id="iops">
+                              <option value=".25">.25</option>
+                              <option value="2">2</option>
+                              <option value="4" selected="selected">4</option>
+                              <option value="10">10</option>
+                            </select>
+                          </td>
+                          <td>
+                            <select name="iops" id="iops">
+                              <option value=".25">.25</option>
+                              <option value="2">2</option>
+                              <option value="4" selected="selected">4</option>
+                              <option value="10">10</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                            <td>Tipo Infraestructura</td>
+                            <td>
+                              <select name="infra_type" id="infra_type">
+                                <option value="shared" >Compartida</option>
+                                <option value="dedicated" selected>Dedicada</option>
+                                <option value="bm">Bare Metal</option>
+                              </select>
+                            </td>
+                            <td>
+                              <select name="infra_type" id="infra_type">
+                                <option value="shared" >Compartida</option>
+                                <option value="dedicated" selected>Dedicada</option>
+                                <option value="bm">Bare Metal</option>
+                              </select>
+                            </td>
+                        </tr>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-    <!-- Parámetros para los respaldos -->
+<!-- Parámetros para los respaldos -->
     <div class="wrapper wrapper-content animated fadeInRight">
         <div class="row">
             <div class="col-lg-12">
@@ -194,25 +179,30 @@
                                 </tr>
                             </thead>
                             <tr>
-                                <td>Volumen a respaldar entre Persistent Volumes y archivos YAML(GB): </td>
-                                <td><input type="number" id="almacenamientogb" name="almacenamientogb"></td>
+                              <td>Volumen a respaldar entre Persistent Volumes y archivos YAML(GB): </td>
+                              <td><input type="number" id="almacenamientogb" name="almacenamientogb"></td>
                             </tr>
                             <tr>
-                                <td>Región Almacenamiento de Respaldos: </td>
-                                <td><select name="countryrespaldo" id="countryrespaldo">
-                                        <option value="mexico">México</option>
-                                    </select></td>
+                              <td>Usar con PX-Enterprise: </td>
+                              <td><input type="checkbox" id="pxent" value="false" onClick="usaPXEnterprise(this);"></td>
                             </tr>
-                            <tr>
-                                <td>Resiliencia del respaldo: </td>
-                                <td><select name="resiliencybackup" id="resiliencybackup">
-                                        <option value="single">Single Region</option>
-                                    </select></td>
-                            </tr>
-                        </table>
 
-                        <div>
-                            <table class="table table-stripped">
+                            <tr>
+                              <td>Región Almacenamiento de Respaldos: </td>
+                              <td><select name="countryrespaldo" id="countryrespaldo">
+                                <option value="mexico">México</option>
+                              </select></td>
+                            </tr>
+                            <tr>
+                              <td>Resiliencia del respaldo: </td>
+                              <td><select name="resiliencybackup" id="resiliencybackup">
+                                <option value="single">Single Region</option>
+                              </select></td>
+                            </tr>
+                          </table>
+
+
+                       <table class="table table-stripped">
                                 <thead>
                                     <tr>
                                         <th>Políticas de Respaldo</th>
@@ -220,57 +210,54 @@
                                         <th>Máximo de respaldos dentro de un mes</th>
                                     </tr>
                                 </thead>
-                                <tr>
-                                    <td>Semanal</td>
-                                    <td>
-                                        <input type="checkbox" name="rsemanal" id="rsemanal" value=true checked>Si<br>
-                                    </td>
-                                    <td>
-                                        <input type="number" id="rsemanalretencion" name="rsemanalretencion" value=2>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Diarios</td>
-                                    <td>
-                                        <input type="checkbox" name="rdiario" id="rdiario" value=true>Si<br>
-                                    </td>
-                                    <td>
-                                        <input type="number" id="rdiarioretencion" name="rdiarioretencion">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Mensuales</td>
-                                    <td>
-                                        <input type="checkbox" name="rmensual" id="rmensual" value=true>Si<br>
-                                    </td>
-                                    <td>
-                                        <input type="number" id="rmensualretencion" name="rmensualretencion">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Anuales</td>
-                                    <td>
-                                        <input type="checkbox" name="ranual" id="ranual" value=true>Si<br>
-                                    </td>
-                                    <td>
-                                        <input type="number" id="ranualretencion" name="ranualretencion">
-                                    </td>
-                                </tr>
+                          <tr>
+                            <td>Semanal</td>
+                              <td>
+                                <input type="checkbox" name="rsemanal" id="rsemanal" value=true checked>Si<br>
+                              </td>
+                            <td>
+                              <input type="number" id="rsemanalretencion" name="rsemanalretencion" value=2>
                             </td>
-                        </tbody>
-                    </table>
-                </div>
+                          </tr>
+                          <tr>
+                            <td>Diarios</td>
+                            <td>
+                              <input type="checkbox" name="rdiario" id="rdiario" value=true>Si<br>
+                              </td>
+                            <td>
+                              <input type="number" id="rdiarioretencion" name="rdiarioretencion">
+                              %Cambios Diarios <input type="number" id="diff" name="diff" min="1" max="100" value="100" step="1" disabled> 
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Mensuales</td>
+                            <td>
+                              <input type="checkbox" name="rmensual" id="rmensual" value=true>Si<br>
+                              </td>
+                            <td>
+                              <input type="number" id="rmensualretencion" name="rmensualretencion">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Anuales</td>
+                            <td>
+                              <input type="checkbox" name="ranual" id="ranual" value=true>Si<br>
+                              </td>
+                            <td>
+                              <input type="number" id="ranualretencion" name="ranualretencion">
+                            </td>
+                          </tr>
+                        </table>
+                  </div>
             </div>
         </div>
-        </div>
-        </div>
     </div>
+</div>
 
 
 
-
-        <!-- Parámetros para comunicaciones-->
-        <div class="wrapper wrapper-content animated fadeInRight">
+  <!-- Parámetros para comunicaciones -->
+   <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="ibox float-e-margins">
@@ -292,62 +279,64 @@
                                                     </tr>
                                                 </thead>
                                                 <tr>
-                                                    <td>Tipo de Gateway</td>
-                                                    <td>
-                                                        <select name="typega" id="typega">
-                                                            <option value="strongswan">Strong Swan</option>
-                                                            <option value="vyatta">Vyatta</option>
-                                                            <option value="juniper">Juniper</option>
-                                                        </select>
-                                                    </td>
-                                                    <td>
-                                                        <select name="typegadallas" id="typegadallas">
-                                                            <option value="strongswan">Strong Swan</option>
-                                                            <option value="vyatta">Vyatta</option>
-                                                            <option value="juniper">Juniper</option>
-                                                        </select>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Interfase de Red</td>
-                                                    <td>
-                                                        <select name="interfase" id="interfase">
-                                                            <option value="1">1 Gbps</option>
-                                                            <option value="10">10 Gbps</option>
-                                                        </select>
-                                                    </td>
-                                                    <td>
-                                                        <select name="interfasedallas" id="interfasedallas">
-                                                            <option value="1">1 Gbps</option>
-                                                            <option value="10">10 Gbps</option>
-                                                        </select>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Manejo de información sensible<br>
-                                                        <i><small>Vyatta no dispone de módulo IPS</small></i>
-                                                    </td>
-                                                    <td>
-                                                        <input type="hidden" name="pii" value=false />
-                                                        <input type="checkbox" name="pii" id="pii" value=true>Si<br>
-                                                    </td>
-                                                    <td>
-                                                        <input type="hidden" name="piidallas" value=false />
-                                                        <input type="checkbox" name="piidallas" id="piidallas" value=true>Si<br>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Requiere Alta Disponibilidad</td>
-                                                    <td>
-                                                        <input type="hidden" name="ha" value=false />
-                                                        <input type="checkbox" name="ha" id="ha" value=true>Si<br>
-                                                    </td>
-                                                    <td>
-                                                        <input type="hidden" name="hadallas" value=false />
-                                                        <input type="checkbox" name="hadallas" id="hadallas" value=true>Si<br>
-                                                    </td>
-                                                </tr>
-                        <table style="width:100%" bgcolor="#00008B" id="tsalud" name="tsalud" align="center"
+                              <td>Tipo de Gateway</td>
+                              <td>
+                                <select name="typega" id="typega">
+                                  <option value="strongswan">Strong Swan</option>
+                                  <option value="vyatta">Vyatta</option>
+                                  <option value="juniper" selected>Juniper</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select name="typegadallas" id="typegadallas">
+                                  <option value="juniper" selected>Juniper</option>
+                                  <option value="strongswan">Strong Swan</option>
+                                  <option value="vyatta">Vyatta</option>
+                                  <option value="juniper" selected>Juniper</option>
+                                </select>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Interfase de Red</td>
+                              <td>
+                                <select name="interfase" id="interfase">
+                                  <option value="1">1 Gbps</option>
+                                  <option value="10">10 Gbps</option>
+                                </select>
+                              </td>
+                               <td>
+                                <select name="interfasedallas" id="interfasedallas">
+                                  <option value="1">1 Gbps</option>
+                                  <option value="10">10 Gbps</option>
+                                </select>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Manejo de información sensible<br>
+                              <i><small>Vyatta no dispone de módulo IPS</small></i></td>
+                              <td>
+                                <input type="hidden" name="pii" value=false />
+                                <input type="checkbox" name="pii" id="pii" value=true checked>Si<br>
+                                </td>
+                                <td>
+                                <input type="hidden" name="piidallas" value=false />
+                                <input type="checkbox" name="piidallas" id="piidallas" value=true checked>Si<br>
+                                </td>
+                            </tr>
+                            <tr>
+                              <td>Requiere Alta Disponibilidad</td>
+                              <td>
+                                <input type="hidden" name="ha" value=false />
+                                <input type="checkbox" name="ha" id="ha" value=true checked>Si<br>
+                                </td>
+                                <td>
+                                <input type="hidden" name="hadallas" value=false />
+                                <input type="checkbox" name="hadallas" id="hadallas" value=true >Si<br>
+                                </td>
+                            </tr>
+                          </table>
+
+                          <table style="width:100%" bgcolor="#00008B" id="tsalud" name="tsalud" align="center"
                             class="table table-stripped">
                             <table class="table table-stripped">
                                 <thead>
@@ -376,8 +365,8 @@
                                     </td>
                                 </tr>
                             </div>
-
-                                                <table style="width:100%" bgcolor="#00008B" id="tsalud" name="tsalud"
+                                  <!-- tabla parametros del gateway -->
+                                  <table style="width:100%" bgcolor="#00008B" id="tsalud" name="tsalud"
                                                     align="center" class="table table-stripped">
                                                     <table class="table table-stripped">
 
@@ -388,157 +377,112 @@
                                                                 <th>Valor Dallas</th>
 
                                                             </tr>
-                                                            <tr>
-                                                                <td>Región</td>
-                                                                <td>
-                                                                    <select name="regiondl" id="regiondl">
-                                                                        <option value="mexico" selected="selected">
-                                                                            México
-                                                                        </option>
-                                                                        <option value="dallas">Dallas
-                                                                            MZR</option>
-                                                                        <option value="dal3y4">Dallas 3
-                                                                            y 4</option>
-                                                                        <option value="dal3y13">Dallas 3
-                                                                            y 13</option>
-                                                                    </select>
-                                                                </td>
-                                                                <td>
-                                                                    <select name="regiondldallas" id="regiondldallas">
-                                                                        <option value="mexico" selected="selected">
-                                                                            México
-                                                                        </option>
-                                                                        <option value="dallas">Dallas
-                                                                            MZR</option>
-                                                                        <option value="dal3y4">Dallas 3
-                                                                            y 4</option>
-                                                                        <option value="dal3y13">Dallas 3
-                                                                            y 13</option>
-                                                                    </select>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Tipo</td>
-                                                                <td>
-                                                                    <select name="typedl" id="typedl">
-                                                                        <option value="eclassic">
-                                                                            Exchange on Classic</option>
-                                                                        <option value="cclassic">Connect
-                                                                            on classic</option>
-                                                                        <option value="dclassic">
-                                                                            Dedicated on classic
-                                                                        </option>
-                                                                        <option value="dv2unmet">
-                                                                            Dedicated v2.0 unmetered
-                                                                        </option>
-                                                                        <option value="dv2met">Dedicated
-                                                                            v2.0 metered</option>
-                                                                    </select>
-                                                                <td>
-                                                                    <select name="typedldallas" id="typedldallas">
-                                                                        <option value="eclassic">
-                                                                            Exchange on Classic</option>
-                                                                        <option value="cclassic">Connect
-                                                                            on classic</option>
-                                                                        <option value="dclassic">
-                                                                            Dedicated on classic
-                                                                        </option>
-                                                                        <option value="dv2unmet">
-                                                                            Dedicated v2.0 unmetered
-                                                                        </option>
-                                                                        <option value="dv2met">Dedicated
-                                                                            v2.0 metered</option>
-                                                                    </select>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Puerto</td>
-                                                                <td>
-                                                                    <select name="puerto" id="puerto">
-                                                                        <option value="50mbps">50 Mbps
-                                                                        </option>
-                                                                        <option value="100mbps">100 Mbps
-                                                                        </option>
-                                                                        <option value="200mbps">200 Mbps
-                                                                        </option>
-                                                                        <option value="500mbps">500 Mbps
-                                                                        </option>
-                                                                        <option value="1gbps">1 Gbps
-                                                                        </option>
-                                                                        <option value="2gbps">2 Gbps
-                                                                        </option>
-                                                                        <option value="5gbps">5 Gbps
-                                                                        </option>
-                                                                        <option value="10gbps">10 Gbps
-                                                                        </option>
-                                                                    </select>
-                                                                </td>
-                                                                <td>
-                                                                    <select name="puertodallas" id="puertodallas">
-                                                                        <option value="50mbps">50 Mbps
-                                                                        </option>
-                                                                        <option value="100mbps">100 Mbps
-                                                                        </option>
-                                                                        <option value="200mbps">200 Mbps
-                                                                        </option>
-                                                                        <option value="500mbps">500 Mbps
-                                                                        </option>
-                                                                        <option value="1gbps">1 Gbps
-                                                                        </option>
-                                                                        <option value="2gbps">2 Gbps
-                                                                        </option>
-                                                                        <option value="5gbps">5 Gbps
-                                                                        </option>
-                                                                        <option value="10gbps">10 Gbps
-                                                                        </option>
-                                                                    </select>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Routing</td>
-                                                                <td>
-                                                                    <select name="routing" id="routing">
-                                                                        <option value="local">Local
-                                                                        </option>
-                                                                        <option value="global">Global
-                                                                        </option>
-                                                                    </select>
-                                                                </td>
-                                                                <td>
-                                                                    <select name="routingdallas" id="routingdallas">
-                                                                        <option value="local">Local
-                                                                        </option>
-                                                                        <option value="global">Global
-                                                                        </option>
-                                                                    </select>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Requiere Alta Disponibilidad</td>
-                                                                <td>
-                                                                    <input type="hidden" name="ha" value=false />
-                                                                    <input type="checkbox" name="ha" id="ha"
-                                                                        value=true>Si<br>
-                                                                </td>
-                                                                <td>
-                                                                    <input type="hidden" name="hadallas" value=false />
-                                                                    <input type="checkbox" name="hadallas" id="hadallas"
-                                                                        value=true>Si<br>
-                                                                </td>
-                                                            </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                      <td>Región</td>
+                                      <td>
+                                          <select name="regiondl" id="regiondl">
+                                            <option value="mexico" selected="selected">México</option>
+                                            <option value="dallas">Dallas MZR</option>
+                                            <option value="dal3y4">Dallas 3 y 4</option>
+                                            <option value="dal3y13">Dallas 3 y 13</option>
+                                          </select>
+                                      </td>
+                                      <td>
+                                          <select name="regiondldallas" id="regiondldallas">
+                                            <option value="dal3y13" selected="selected">Dallas 3 y 13 </option>
+                                            <option value="mexico" >México</option>
+                                            <option value="dallas">Dallas MZR</option>
+                                            <option value="dal3y4">Dallas 3 y 4</option>
+
+                                          </select>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Tipo</td>
+                                      <td>
+                                        <select name="typedl" id="typedl">
+                                          <option value="eclassic">Exchange on Classic</option>
+                                          <option value="cclassic">Connect on classic</option>
+                                          <option value="dclassic"  selected="selected">Dedicated on classic</option>
+                                          <option value="dv2unmet">Dedicated v2.0 unmetered</option>
+                                          <option value="dv2met">Dedicated v2.0 metered</option>
+                                        </select>
+                                      </td>
+                                      <td>
+                                        <select name="typedldallas" id="typedldallas">
+                                          <option value="eclassic">Exchange on Classic</option>
+                                          <option value="cclassic">Connect on classic</option>
+                                          <option value="dclassic"  selected="selected">Dedicated on classic</option>
+                                          <option value="dv2unmet">Dedicated v2.0 unmetered</option>
+                                          <option value="dv2met">Dedicated v2.0 metered</option>
+                                        </select>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Puerto</td>
+                                      <td>
+                                        <select name="puerto" id="puerto">
+                                          <option value="50mbps">50 Mbps</option>
+                                          <option value="100mbps">100 Mbps</option>
+                                          <option value="200mbps">200 Mbps</option>
+                                          <option value="500mbps">500 Mbps</option>
+                                          <option value="1gbps"  selected="selected">1 Gbps</option>
+                                          <option value="2gbps">2 Gbps</option>
+                                          <option value="5gbps">5 Gbps</option>
+                                          <option value="10gbps">10 Gbps</option>
+                                        </select>
+                                      </td>
+                                      <td>
+                                        <select name="puertodallas" id="puertodallas">
+                                          <option value="50mbps">50 Mbps</option>
+                                          <option value="100mbps">100 Mbps</option>
+                                          <option value="200mbps">200 Mbps</option>
+                                          <option value="500mbps">500 Mbps</option>
+                                          <option value="1gbps"  selected="selected">1 Gbps</option>
+                                          <option value="2gbps">2 Gbps</option>
+                                          <option value="5gbps">5 Gbps</option>
+                                          <option value="10gbps">10 Gbps</option>
+                                        </select>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Routing</td>
+                                      <td>
+                                        <select name="routing" id="routing">
+                                          <option value="local"  selected="selected">Local</option>
+                                          <option value="global">Global</option>
+                                        </select>
+                                      </td>
+                                      <td>
+                                        <select name="routingdallas" id="routingdallas">
+                                          <option value="local"  selected="selected">Local</option>
+                                          <option value="global">Global</option>
+                                        </select>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Requiere Alta Disponibilidad</td>
+                                      <td>
+                                        <input type="hidden" name="ha" value=false />
+                                        <input type="checkbox" name="ha" id="ha" value=true checked>Si<br>
+                                        </td>
+                                        <td>
+                                        <input type="hidden" name="hadallas" value=false />
+                                        <input type="checkbox" name="hadallas" id="hadallas" value=true >Si<br>
+                                        </td>
+                                    </tr>
+                                  </table>
+                              </td>
+                            </tr>
+                          </table>
+
                     </div>
+              </div>
+          </div>
+      </div>
+  </div>
 
-
-    <!-- Parámetros para Monitoreo -->
-    <div class="wrapper wrapper-content animated fadeInRight">
+  <!-- Parámetros para Monitoreo -->
+  <div class="wrapper wrapper-content animated fadeInRight">
         <div class="row">
             <div class="col-lg-12">
                 <div class="ibox float-e-margins">
@@ -574,30 +518,25 @@
                                                         <th>Valor</th>
                                                     </tr>
                                                 </thead>
-                                                <tr>
-                                                    <td>Almacenamiento (GB)</td>
-                                                    <td>
-                                                        <input type="number" name="storagetracker" id="storagetracker"
-                                                            autofocus placeholder="GB">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Tiempo de retención</td>
-                                                    <td>
-                                                        <select name="tracker_retencion" id="tracker_retencion">
-                                                            <option value="7dias">7 días
-                                                            </option>
-                                                            <option value="14dias">14 días
-                                                            </option>
-                                                            <option value="30dias">30 días
-                                                            </option>
-                                                            <option value="30diash">30 días
-                                                                HIPAA</option>
-                                                        </select>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </div>
+                         <tr>
+                          <td >Almacenamiento (GB)</td>
+                          <td>
+                          <input type="number" name="storagetracker" id="storagetracker" autofocus placeholder="GB">
+                          </td>
+                        </tr>
+                        <tr>
+                         <td >Tiempo de retención</td>
+                         <td>
+                           <select name="tracker_retencion" id="tracker_retencion">
+                             <option value="7dias">7 días</option>
+                             <option value="14dias">14 días</option>
+                             <option value="30dias"  selected="selected">30 días</option>
+                             <option value="30diash">30 días HIPAA</option>
+                           </select>
+                         </td>
+                       </tr>
+                      </table>
+                          </div>
                                     </div>
                                 </div>
                             </div>
@@ -605,7 +544,7 @@
 
 
 
-                        <div class="wrapper wrapper-content animated fadeInRight">
+                      <div class="wrapper wrapper-content animated fadeInRight">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="ibox float-e-margins">
@@ -626,36 +565,32 @@
                                                         <th>Valor</th>
                                                     </tr>
                                                 </thead>
-                                                <tr>
-                                                    <td>Almacenamiento (GB)</td>
-                                                    <td>
-                                                        <input type="number" name="storagelogs" id="storagelogs"
-                                                            autofocus placeholder="GB">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Tiempo de retención</td>
-                                                    <td>
-                                                        <select name="loganalysis_retencion" id="loganalysis_retencion">
-                                                            <option value="7dias">7 días
-                                                            </option>
-                                                            <option value="14dias">14 días
-                                                            </option>
-                                                            <option value="30dias">30 días
-                                                            </option>
-                                                            <option value="30diash">30 días
-                                                                HIPAA</option>
-                                                        </select>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </div>
+                         <tr>
+                          <td >Almacenamiento (GB)</td>
+                          <td>
+                          <input type="number" name="storagelogs" id="storagelogs" autofocus placeholder="GB">
+                          </td>
+                        </tr>
+                        <tr>
+                         <td >Tiempo de retención</td>
+                         <td>
+                           <select name="loganalysis_retencion" id="loganalysis_retencion">
+                             <option value="7dias">7 días</option>
+                             <option value="14dias">14 días</option>
+                             <option value="30dias"  selected="selected">30 días</option>
+                             <option value="30diash">30 días HIPAA</option>
+                           </select>
+                         </td>
+                       </tr>
+                      </table>
+                       </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="wrapper wrapper-content animated fadeInRight">
+
+                     <div class="wrapper wrapper-content animated fadeInRight">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="ibox float-e-margins">
@@ -674,78 +609,70 @@
                                             <table class="table table-stripped">
                                                 <thead>
                                                     <tr>
-                                                        <th>Parámetro</th>
+                                                        <th>Configuración de Monitoreo de Salud (Cloud Monitoring)</th>
                                                         <th>Valor</th>
                                                     </tr>
                                                 </thead>
-                                                <tr>
-                                                    <td style="" align="center">Node</td>
-                                                    <td>
-                                                        <input type="number" name="" id="N" autofocus
-                                                            placeholder="Node">
-                                                    </td>
-                                                </tr>
+                         <!--tr>
+                          <td style="" align="center">Node</td>
+                          <td>
+                          <input type="number" name="" id="N" autofocus placeholder="Node"> </td>
+                        </tr>
 
-                                                <tr>
-                                                    <td style="" align="center">Lite node</td>
-                                                    <td>
-                                                        <input type="number" name="" id="NL" autofocus
-                                                            placeholder="Lite node">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="" align="center">Container</td>
-                                                    <td>
-                                                        <input type="number" name="contenedores" id="contenedores"
-                                                            autofocus placeholder="Container" value=900>
-                                                    </td>
-                                                </tr>
+                        <tr>
+                          <td style="" align="center">Lite node</td>
+                          <td>
+                          <input type="number" name="" id="NL" autofocus placeholder="Lite node">
+                        </td>
+                      </tr-->
+                          <tr>
+                          <td style="">Container</td>
+                          <td>
+                          <input type="number" name="contenedores" id="contenedores" autofocus placeholder="Container" value=900>
+                        </td>
+                        </tr>
 
 
 
-                                                <tr>
-                                                    <td style="" align="center">API Call</td>
-                                                    <td>
-                                                        <input type="number" name="" id="API" autofocus
-                                                            placeholder="API´s">
-                                                    </td>
-                                                </tr>
+                          <!--tr>
+                          <td style="" align="center">API Call</td>
+                          <td>
+                          <input type="number" name="" id="API" autofocus placeholder="API´s">
+                        </td>
+                      </tr-->
 
 
-                                                <tr>
-                                                    <td style="" align="center">Time series hour
-                                                    </td>
-                                                    <td>
-                                                        <input type="number" name="seriestiempo" id="seriestiempo"
-                                                            autofocus placeholder="Time series" value=20>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="" align="center">Región</td>
-                                                    <td>
-                                                        <select name="regionmon" id="regionmon">
-                                                            <option value="mexico" selected>
-                                                                US-South
-                                                            </option>
-                                                            <option value="mexico">Us-East
-                                                            </option>
-                                                        </select>
-                                                    </td>
-                                                </tr>
+                          <tr>
+                          <td style="" >Time series hour</td>
+                          <td>
+                          <input type="number" name="seriestiempo" id="seriestiempo" autofocus placeholder="Time series" value=20>
+                        </td>
+                        </tr>
 
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+                        <!--
+                        <tr>
+                          <td style="" >Región</td>
+                          <td>
+                            <select name="regionmon" id="regionmon">
+                             <option value="mexico" selected>US-South</option>
+                              <option value="mexico">Us-East</option>
+                            </select>
+                          </td>
+                        </tr>
+                        -->
+                        </table>
+
                     </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="wrapper wrapper-content animated fadeInRight">
+ <div class="wrapper wrapper-content animated fadeInRight">
         <div class="row">
             <div class="col-lg-12">
                 <div class="ibox float-e-margins">
@@ -789,10 +716,10 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Worker Nodes (min 2)</td>
+                                                    <td>Worker Nodes (min 3)</td>
                                                     <td>
                                                         <label for="wn_prod"><input type="number" id="wn_prod"
-                                                                name="wn_prod" value="2" min="2">
+                                                                name="wn_prod" value="3" min="3">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -1027,14 +954,31 @@
 
 
 
-    <p>
+<p>
         <button type="submit" class="btn btn-outline btn-primary">Quiero mi
             dimensionamiento</button>
     </p>
 </form>
 
 
+
+
 <% if (respuestasol != nil and respuestasol.size>0) then %>
+<div class="row wrapper wrapper-content animated fadeInRight">
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-12 text-center">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h2>Resultados</h2>
+
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+
 <div class="wrapper wrapper-content animated fadeInRight">
      <div class="row">
          <div class="col-lg-12">
@@ -1050,15 +994,18 @@
                 </div>
 
                 <div class="ibox-content">
+                 <table class="table table-stripped">
+              <thead>
+                <tr>
+                  <th>Precio Mensual Total de la Solución (USD)</th>
+                  <th>=</th>
+                  <th>Precio Soporte Mensual (USD)</th>
+                  <th>+</th>
+                  <th>Precio Mensual de Servicios(USD)</th>
+                </tr>
+              </thead>
 
-                  <table  style="width:100%" align="left"  class="table table-stripped">
-                      <tr>
-                        <th bgcolor="#00008B" style="color: white;">Precio Mensual Total de la Solución (USD)</th>
-                        <th bgcolor="#00008B" style="color: white;">=</th>
-                        <th bgcolor="#00008B" style="color: white;">Precio Soporte Mensual (USD)</th>
-                        <th bgcolor="#00008B" style="color: white;">+</th>
-                        <th bgcolor="#00008B" style="color: white;">Precio Mensual de Servicios(USD)</th>
-                      </tr>
+                  
 
                       <% respuestasol.each do |json| %>
                       <tr>
@@ -1085,7 +1032,7 @@
          <div class="col-lg-12">
              <div class="ibox float-e-margins">
                 <div class="ibox-title">
-                      <h5>Dimensionamiento Clúster Óptimo</h5>
+                      <h5>Dimensionamiento Clúster Óptimo (Configuración N+1 Productiva)</h5>
 
                       <div class="ibox-tools">
                           <a class="collapse-link">
@@ -1095,15 +1042,16 @@
                 </div>
 
                 <div class="ibox-content">
-                    <table  style="width:100%" align="left"  class="table table-stripped">
+                    <table class="table table-stripped">
                       <thead>
                         <tr>
-                          <th bgcolor="#00008B" style="color: white;">Precio Mensual (USD) sin SubsOCP </th>
-                          <th bgcolor="#00008B" style="color: white;">Flavor</th>
-                          <th bgcolor="#00008B" style="color: white;">Tipo de Infraestructura</th>
-                          <th bgcolor="#00008B" style="color: white;">Workers</th>
+                        
+                          <th>Precio Mensual (USD) sin SubsOCP </th>
+                          <th>Flavor</th>
+                          <th>Tipo de Infraestructura</th>
+                          <th>Workers</th>
 
-                          <!--th bgcolor="#00008B" style="color: white;">Precio  Mensual (USD) con Subscripción OCP</th-->
+                          <!--th>Precio  Mensual (USD) con Subscripción OCP</th-->
                         </tr>
                       </thead>
                       <tbody>
@@ -1145,15 +1093,15 @@
                 <div class="ibox-content">
 
 
-                    <table  style="width:100%" align="left"  class="table table-stripped">
+                    <table class="table table-stripped">
                       <thead>
                         <tr>
-                          <th bgcolor="#00008B" style="color: white;">Precio Mensual (USD) Unidad Restante</th>
-                          <th bgcolor="#00008B" style="color: white;">Precio Mensual (USD) Unidades</th>
-                          <th bgcolor="#00008B" style="color: white;">IOPS/GB</th>
-                          <th bgcolor="#00008B" style="color: white;">Tamaño máximo</th>
-                          <th bgcolor="#00008B" style="color: white;">Unidades de Tamaño Máximo</th>
-                          <th bgcolor="#00008B" style="color: white;">Unidad Restante</th>
+                          <th>Precio Mensual (USD) Unidad Restante</th>
+                          <th>Precio Mensual (USD) Unidades</th>
+                          <th>IOPS/GB</th>
+                          <th>Tamaño máximo</th>
+                          <th>Unidades de Tamaño Máximo</th>
+                          <th>Unidad Restante</th>
 
                         </tr>
                       </thead>
@@ -1201,12 +1149,12 @@
                 </div>
 
                 <div class="ibox-content">
-                  <table  style="width:100%" align="left"  class="table table-stripped">
+                  <table class="table table-stripped">
                     <thead>
                       <tr>
-                        <th bgcolor="#00008B" style="color: white;">Precio Mensual (USD)</th>
-                        <th bgcolor="#00008B" style="color: white;">Servicio</th>
-                        <th bgcolor="#00008B" style="color: white;">configuración</th>
+                        <th>Precio Mensual (USD)</th>
+                        <th>Servicio</th>
+                        <th>configuración</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -1262,14 +1210,14 @@
 
                 <div class="ibox-content">
                   <h3>Sizing IKS para respaldos</h3>
-                  <table  style="width:100%" align="left"  class="table table-stripped">
+                  <table class="table table-stripped">
                     <thead>
                       <tr>
-                        <th bgcolor="#00008B" style="color: white;">Precio Mensual (USD)</th>
-                        <th bgcolor="#00008B" style="color: white;">Tipo Worker Node</th>
-                        <th bgcolor="#00008B" style="color: white;">Tipo Infraestructura</th>
-                        <th bgcolor="#00008B" style="color: white;">Workers</th>
-                        <th bgcolor="#00008B" style="color: white;">Región</th>
+                        <th>Precio Mensual (USD)</th>
+                        <th>Tipo Worker Node</th>
+                        <th>Tipo Infraestructura</th>
+                        <th>Workers</th>
+                        <th>Región</th>
 
                       </tr>
                     </thead>
@@ -1286,11 +1234,11 @@
                   </table>
 
                   <h3>Sizing Almacenamiento de Objetos para respaldos</h3>
-                  <table  style="width:100%" align="left"  class="table table-stripped">
+                  <table class="table table-stripped">
                     <thead>
                       <tr>
-                        <th bgcolor="#00008B" style="color: white;">Precio Mensual (USD)</th>
-                        <th bgcolor="#00008B" style="color: white;">Nota</th>
+                        <th>Precio Mensual (USD)</th>
+                        <th>Nota</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -1302,11 +1250,11 @@
                   </table>
 
                   <h3>Sizing PX-Backup</h3>
-                  <table  style="width:100%" align="left"  class="table table-stripped">
+                  <table class="table table-stripped">
                     <thead>
                       <tr>
-                        <th bgcolor="#00008B" style="color: white;">Precio Mensual (USD)</th>
-                        <th bgcolor="#00008B" style="color: white;">Workers Node</th>
+                        <th>Precio Mensual (USD)</th>
+                        <th>Workers Node</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -1342,15 +1290,15 @@
                 </div>
 
                 <div class="ibox-content">
-                    <table  style="width:100%" align="left"  class="table table-stripped">
+                    <table class="table table-stripped">
                       <thead>
                         <tr>
-                          <th bgcolor="#00008B" style="color: white;">Precio Mensual (USD)</th>
-                          <th bgcolor="#00008B" style="color: white;">Región</th>
-                          <th bgcolor="#00008B" style="color: white;">Tipo de Gateway</th>
-                          <th bgcolor="#00008B" style="color: white;">Manejo información sensible</th>
-                          <th bgcolor="#00008B" style="color: white;">Nodos </th>
-                          <th bgcolor="#00008B" style="color: white;">Descripción </th>
+                          <th>Precio Mensual (USD)</th>
+                          <th>Región</th>
+                          <th>Tipo de Gateway</th>
+                          <th>Manejo información sensible</th>
+                          <th>Nodos </th>
+                          <th>Descripción </th>
                         </tr>
                       </thead>
                       <tbody>
@@ -1393,16 +1341,16 @@
 
                 <div class="ibox-content">
 
-                        <table  style="width:100%" align="left"  class="table table-stripped">
+                        <table class="table table-stripped">
                           <thead>
                             <tr>
-                              <th bgcolor="#00008B" style="color: white;">Precio Mensual (USD)</th>
-                              <th bgcolor="#00008B" style="color: white;">Región</th>
-                              <th bgcolor="#00008B" style="color: white;">Tipo</th>
-                              <th bgcolor="#00008B" style="color: white;">Puerto</th>
-                              <th bgcolor="#00008B" style="color: white;">Nodos </th>
-                              <th bgcolor="#00008B" style="color: white;">Routing </th>
-                              <th bgcolor="#00008B" style="color: white;">País Offerta </th>
+                              <th>Precio Mensual (USD)</th>
+                              <th>Región</th>
+                              <th>Tipo</th>
+                              <th>Puerto</th>
+                              <th>Nodos </th>
+                              <th>Routing </th>
+                              <th>País Offerta </th>
                             </tr>
                           </thead>
                           <tbody>
@@ -1449,11 +1397,11 @@
                   <% if (respuestasizingpx != nil and respuestasizingpx.size>0) then %>
                     <h3>Cálculo de Almacenamiento para Respaldos</h3>
 
-                    <table  style="width:100%" align="left"  class="table table-stripped">
+                    <table class="table table-stripped">
                       <thead>
                         <tr>
-                          <th bgcolor="#00008B" style="color: white;">Almacenamiento Requerido (GB)</th>
-                          <th bgcolor="#00008B" style="color: white;">Almacenamiento Requerido Comprimido (GB) Ratio 2.5:1</th>
+                          <th>Almacenamiento Requerido (GB)</th>
+                          <th>Almacenamiento Requerido Comprimido (GB) Ratio 2.5:1</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -1466,15 +1414,15 @@
                   <% end %>
 
                     <% if (respuestasizingalt != nil and respuestasizingalt.size>0) then%>
-                    <h3>Alternativas del Dimensionamiento Clúster</h3>
-                      <table  style="width:100%" align="left"  class="table table-stripped">
+                    <h3>Alternativas del Dimensionamiento Clúster(Configuración N+1 Productiva)</h3>
+                      <table class="table table-stripped">
                         <thead>
                           <tr>
-                            <th bgcolor="#00008B" style="color: white;">Precio Mensual (USD) sin SubsOCP </th>
-                            <th bgcolor="#00008B" style="color: white;">Flavor</th>
-                            <th bgcolor="#00008B" style="color: white;">Tipo de Infraestructura</th>
-                            <th bgcolor="#00008B" style="color: white;">Workers</th>
-                            <!--th bgcolor="#00008B" style="color: white;">Precio Mensual (USD) con Subscripción OCP</th-->
+                            <th>Precio Mensual (USD) sin SubsOCP </th>
+                            <th>Flavor</th>
+                            <th>Tipo de Infraestructura</th>
+                            <th>Workers</th>
+                            <!--th>Precio Mensual (USD) con Subscripción OCP</th-->
                           </tr>
                         </thead>
                         <tbody>
@@ -1496,15 +1444,23 @@
       </div>
     </div>
 </div>
-
 <!--%=respuesta portworx%-->
 <% if (respuesta_portworx != nil and respuesta_portworx.size>0) then%>
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="ibox float-e-margins">
-        <div class="ibox-title">
-          <h5>Dimensionamiento de Portworx</h5>
-        </div>
+  
+    <div class="wrapper wrapper-content animated fadeInRight">
+     <div class="row">
+         <div class="col-lg-12">
+             <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                      <h5>Dimensionamiento de Portworx</h5>
+
+                      <div class="ibox-tools">
+                          <a class="collapse-link">
+                              <i class="fa fa-chevron-up"></i>
+                          </a>
+                      </div>
+                </div>
+        
         <div class="ibox-content">
           <table class="table table-stripped">
             <thead>
@@ -1526,10 +1482,7 @@
               </tr> 
             </tbody>
           </table>
-        </div>
-      </div>
-    </div>
-  </div>
+        
 <% end %>
 
 <!--%=respuesta block storage%-->
@@ -1598,6 +1551,11 @@
       </div>
     </div>
   </div>
+  </div>
+      </div>
+    </div>
+  </div>
+   </div>
 <% end %>
 
 <script>
@@ -1605,6 +1563,21 @@
   function cambiostorage()
   {
     document.getElementById("almacenamientogb").value=document.getElementById("storage").value;
+  };
+
+  function usaPXEnterprise(checkbox)
+  {
+    if (checkbox.checked)
+    {
+      document.getElementById("diff").value=3;
+      document.getElementById("diff").disabled=false;
+    }
+    else
+    {
+      document.getElementById("diff").value=100;
+      document.getElementById("diff").disabled=true;
+    }
+    
   };
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
